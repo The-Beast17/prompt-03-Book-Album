@@ -1,0 +1,248 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+html , body{
+    width : 100%;
+    height : 100%;
+   
+   
+}
+
+body{
+    overflow-x: hidden;
+    color : white;
+}
+
+nav{
+    width :100%;
+    display: flex;
+    justify-content: space-between;
+    padding : 2vw 3vw;
+    align-items:center;
+    position: fixed;
+    top : 0;
+    left :0;
+    z-index:100;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+nav img{
+    height : 6vh;
+    width : 7vh;
+    border-radius: 50%;
+}
+
+
+nav .search-box {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+nav .search-box input{
+    height : 2vw;
+    width : 20vw;
+    border-radius:1vw 0vw 0vw 1vw;
+    padding : 1.2vw 2vw;
+    border-right : none;
+    overflow: hidden;
+    outline: none;
+}
+nav .search-box i{
+   background-color: rgb(87, 10, 10);
+   padding : 0.6vw 1vw;
+   border-radius:0vw 1vw 1vw 0vw;
+   border :2px solid black;
+   overflow: hidden;
+}
+
+nav .search-box  i:hover{
+    font-weight : 700;
+    color: rgb(87, 10, 10);
+    background-color:black ;
+
+}
+
+
+nav ul{
+    display: flex;
+    gap : 3vw;
+    list-style: none;
+}
+
+nav  a{
+    text-decoration: none;
+    font-size: 1.1vw;
+    font-weight: 500;
+    color :white;
+    z-index: 2;
+    position:relative;
+    padding : 1vw 0;
+}
+
+/******************************/
+
+nav ul a::before{
+    content: "";
+    height : 5%;
+    width : 0;
+    background-color: white;
+    position: absolute;
+    bottom : 0;
+    left : 0;
+    z-index:10;
+    transition : .25s all ease-in; 
+}
+
+nav ul a:hover::before{ 
+    width : 100%;
+}
+
+/********************************/
+
+nav .register {
+   display: flex;
+}
+
+nav .register a{
+    background-color: black;
+    color:white;
+    padding : 0.5vw 2vw;
+    border-radius: 3vh;
+}
+
+
+nav .register p {
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    padding : 0 1vw;
+}
+
+.page1{
+    width :100%;
+    height :100%;
+    background-image: linear-gradient(#af9057,#64431b);
+    background-image: linear-gradient(#100343,#10100e);
+    /* background-image: url("");
+    background-size: cover;
+    background-position: center; */
+    /* background-color: black;  */
+}
+
+.page1 .empty{
+    height : 15%;
+    width : 100%;
+    /* background-color: blue; */
+}
+
+.page1 .content{
+    width : 100%;
+    height : 85%;
+    display: flex;
+}
+
+.page1 .content .left{
+    width : 50%;
+    height : 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: end; */
+    padding :0 0 5vw 10vw;
+    
+}
+
+
+.page1 .content .left h1{
+    font-size : 7vw;
+    font-weight: 900;
+    font-family: Helvetica, sans-serif;
+    line-height: 8vw;
+    /* text-align: center; */
+}
+
+
+.page1 .content .left p{
+    font-size : 1vw;
+    padding : 2vw 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+.page1 .content .left button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height : 3vw;
+    width :60%;
+    font-size : 1.2vw;
+    font-weight : 600;
+    padding : 0 1vw;
+    background-color: transparent;
+    color: white;
+    border:none;
+    border-bottom : 1px solid grey;
+
+}
+
+.page1 .content .right img{
+    height :39vw;
+    opacity: 0.8;
+}
+
+
+nav .ri-menu-line{
+    display: none;
+}
+@media (max-width : 600px){
+    nav ul ,nav .register ,nav .search-box{
+        display: none;
+    }
+    nav .ri-menu-line{
+        display: initial;
+        font-size: 3vh;
+    }
+
+    .page1 .content {
+        display: initial;
+        
+    }
+    .page1 .empty{
+        height :9vh;
+    }
+    .page1 .content .left{
+        height :max-content;
+        justify-content: top;
+        width : 100%;
+        padding : 0 6vw;
+    }
+    .page1 .content .left h1{
+       font-size : 15vw;
+       line-height: 17vw;
+    }
+    .page1 .content .left p{
+       font-size : 3vw;
+       line-height: 4.5vw;
+    }
+    .page1 .content .left button{
+       font-size : 4vw;
+       height : 10vw;
+    }
+
+    .page1 .content .right {
+        width : 100%;
+        height : 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .page1 .content .right img{
+        height : 40vh;
+    }
+
+}
